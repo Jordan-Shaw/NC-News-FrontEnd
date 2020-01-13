@@ -1,0 +1,115 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  vertical-align: baseline;
+}
+
+html, body {
+  height: 100%,
+}
+
+body {
+  background-color: #ffffff;
+}
+
+Header {
+  background-color: #202829;
+  border-bottom: solid 5pt #ba1f31;
+  padding-bottom: 2%;
+  margin-bottom: 1%;
+  color: #ffffff;
+}
+
+h1 {
+  color: #ffffff;
+}
+
+ul {
+  padding: 1%;
+  list-style-type: none;
+}
+
+li {
+  margin-bottom: 1%;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: red;
+}
+
+a:visited {
+  text-decoration: underline;
+  color: #ba1f31;
+}
+
+.articleCard {
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: "votes title title author" 
+  "votes comments topic date";
+  border: solid 1px #202829;
+  align-self: center;
+}
+
+.singleArticle {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 5fr 1fr 1fr;
+  grid-template-areas: "articleTitle articleTitle"
+  "articleBody articleBody"
+  "articleTopic articleAuthor"
+  "authorVotes authorVotes";
+}
+
+.articleTitle {
+  grid-area: articleTitle;
+}
+
+.articleBody {
+  grid-area: articleBody;
+}
+
+.articleTopic {
+  grid-area: articleTopic;
+}
+
+.articleAuthor {
+  grid-area: articleAuthor;
+}
+
+.authorVotes {
+  grid-area: authorVotes ;
+}
+
+.title {
+  grid-area: title;
+}
+
+.author {
+  grid-area: author;
+}
+
+.date {
+  grid-area: date;
+}
+
+.comments {
+  grid-area: comments;
+}
+
+.votes {
+  grid-area: votes;
+}
+
+.topic {
+  grid-area: topic;
+}
