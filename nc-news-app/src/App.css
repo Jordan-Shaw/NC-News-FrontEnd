@@ -4,6 +4,7 @@
   border: 0;
   outline: 0;
   vertical-align: baseline;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 html, body {
@@ -16,7 +17,7 @@ body {
 
 Header {
   background-color: #202829;
-  border-bottom: solid 5pt #ba1f31;
+  border-bottom: solid 10pt #ba1f31;
   padding-bottom: 2%;
   margin-bottom: 1%;
   color: #ffffff;
@@ -24,11 +25,13 @@ Header {
 
 h1 {
   color: #ffffff;
+  padding-bottom: 1%;
+  font-size: 50pt;
 }
 
 ul {
   padding: 1%;
-  list-style-type: none;
+  list-style-image: url('./media/bullet.png');
 }
 
 li {
@@ -50,20 +53,25 @@ a:visited {
   color: #ba1f31;
 }
 
+h2 {
+  text-align: left;
+  font-size: 28pt;
+  color: #ba1f31;
+}
+
 .articleCard {
   display: grid;
   grid-template-columns: 1fr 3fr 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   grid-template-areas: "votes title title author" 
   "votes comments topic date";
-  border: solid 1px #202829;
   align-self: center;
 }
 
 .singleArticle {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 5fr 1fr 1fr;
+  grid-template-rows: 1fr 2fr 1fr 1fr;
   grid-template-areas: "articleTitle articleTitle"
   "articleBody articleBody"
   "articleTopic articleAuthor"
@@ -108,8 +116,20 @@ a:visited {
 
 .votes {
   grid-area: votes;
+  justify-self: left;
+  align-self: center;
+  justify-self: center;
+
 }
 
 .topic {
   grid-area: topic;
+}
+
+.navItem {
+  padding: 1%;
+}
+
+Header, a, a.visited {
+  color: #ffffff;
 }

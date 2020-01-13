@@ -14,11 +14,15 @@ export default class ArticleList extends Component {
       return <p>Loading...</p>
     } else {
       return (
-        <ul>
-          {articles.map(article => {
-            return <ArticleCard article={article} key={article.article_id} />
-          })}
-        </ul>
+        <main>
+          <h2>Articles</h2>
+          <h3>Here are all of our articles. Use the buttons below to see articles relating to specific topics.</h3>
+          <ul>
+            {articles.map(article => {
+              return <ArticleCard article={article} key={article.article_id} />
+            })}
+          </ul>
+        </main>
       )
     }
   }

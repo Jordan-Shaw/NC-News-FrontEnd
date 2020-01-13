@@ -6,9 +6,9 @@ export default function Header(username) {
     <header>
       <h1>Welcome to NC News</h1>
       <nav>
-        <Link to="/">Home</Link>
-        <Link to="/articles">Articles</Link>
-        <Link to={`/users/${username}`}>Profile</Link>
+        <Link to="/" className="navItem">Home</Link>
+        <Link to="/articles" className="navItem">Articles</Link>
+        <Link to={`/users/${username}`} className="navItem">Profile</Link>
       </nav>
     </header>
   )
