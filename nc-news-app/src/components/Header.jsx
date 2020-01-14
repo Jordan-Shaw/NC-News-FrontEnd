@@ -1,15 +1,15 @@
 import React from 'react'
-import { Link } from '@reach/router';
+// import { Link } from '@reach/router';
 
 export default function Header(username) {
   return (
     <header>
       <h1>Welcome to NC News</h1>
-      <nav>
+      {/* <nav>
         <Link to="/" className="navItem">Home</Link>
         <Link to="/articles" className="navItem">Articles</Link>
         <Link to={`/users/${username}`} className="navItem">Profile</Link>
-      </nav>
+      </nav> */}
     </header>
   )
 }
