@@ -27,6 +27,8 @@ export default class CommentList extends Component {
     }
   }
 
+  addComment = () => { }
+
   componentDidMount() {
     const { article_id } = this.props;
     this.fetchComments(article_id);

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import ArticleCard from "./ArticleCard";
 import * as api from "../api"
 import { Link } from '@reach/router'
+import ErrorPage from "./ErrorPage"
 
 export default class ArticleList extends Component {
   state = {
@@ -11,14 +12,15 @@ export default class ArticleList extends Component {
     topic: null,
     author: null,
     order: "desc",
-    topics: []
+    topics: [],
+    err: null
   }
 
   render() {
-    const { articles, isLoading } = this.state
+    const { articles, isLoading, err } = this.state
     if (isLoading) {
       return <p>Loading...</p>
-    } else {
+    } else if (!err) {
       return (
         <div>
           <label>Sort by:
@@ -31,9 +33,10 @@ export default class ArticleList extends Component {
             </select>
           </label>
           <ul>Topic:
+            <li key="allTopics"><Link to={"/articles"}>All topics</Link></li>
             {this.state.topics.map(topic => {
-            return <li key={`${topic.slug}`}><Link to={`/articles/topics/${topic.slug}`}>{`${topic.slug}`}</Link></li>
-          })}
+              return <li key={`${topic.slug}`}><Link to={`/articles/topics/${topic.slug}`}>{`${topic.slug}`}</Link></li>
+            })}
           </ul>
           <ul>
             {articles.map(article => {
@@ -42,6 +45,8 @@ export default class ArticleList extends Component {
           </ul>
         </div>
       )
+    } else {
+      return <ErrorPage err={err} />
     }
   }
 
@@ -82,7 +87,9 @@ export default class ArticleList extends Component {
     return api.getArticles(sort_by, topic, author, order).then(articles => {
       this.setState({ articles: articles, isLoading: false });
     }).catch(err => {
-      console.dir(err);
+      const { status } = err.response;
+      const { msg } = err.response.data
+      this.setState({ err: { status, msg }, isLoading: false })
     })
   }
 }

@@ -1,19 +1,21 @@
 import React, { Component } from 'react'
 import * as api from "../api"
 import CommentList from './CommentList'
+import ErrorPage from './ErrorPage';
 
 
 export default class SingleArticle extends Component {
   state = {
     article: {},
-    isLoading: true
+    isLoading: true,
+    err: null
   }
 
   render() {
-    const { article, isLoading } = this.state;
+    const { article, isLoading, err } = this.state;
     if (isLoading) {
       return <p>Loading...</p>
-    } else {
+    } else if (!err) {
       return (
         <div>
           <div className="singleArticle">
@@ -28,6 +30,8 @@ export default class SingleArticle extends Component {
           </div>
         </div>
       )
+    } else {
+      return <ErrorPage err={err} />
     }
   }
 
@@ -39,6 +43,10 @@ export default class SingleArticle extends Component {
   fetchArticle = (article_id) => {
     return api.getArticle(article_id).then(article => {
       this.setState({ article: article, isLoading: false })
+    }).catch(err => {
+      const { status } = err.response;
+      const { msg } = err.response.data
+      this.setState({ err: { status, msg }, isLoading: false })
     })
   }
 }
