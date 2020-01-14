@@ -6,8 +6,9 @@ import Homepage from "./components/Homepage"
 import SingleArticle from "./components/SingleArticle"
 import ArticlePage from "./components/ArticlePage"
 import TopicsPage from "./components/TopicsPage"
-import { slide as Menu } from 'react-burger-menu'
+import { stack as Menu } from 'react-burger-menu'
 import { Link } from '@reach/router'
+import ErrorPage from './components/ErrorPage';
 
 
 
@@ -26,6 +27,7 @@ function App(username) {
           <ArticlePage path="/articles" />
           <TopicsPage path="/articles/topics/:topic" />
           <SingleArticle path="/articles/:article_id" />
+          <ErrorPage default />
         </Router>
       </div>
     </div>
