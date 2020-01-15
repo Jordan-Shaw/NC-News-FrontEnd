@@ -22,7 +22,7 @@ function App(username) {
       </Menu>
       <div id="page-wrap">
         <Header />
-        <Router>
+        <Router className="pageBody">
           <Homepage path="/" />
           <ArticlePage path="/articles" />
           <TopicsPage path="/articles/topics/:topic" />

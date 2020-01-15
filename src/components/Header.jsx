@@ -4,7 +4,7 @@ import React from 'react'
 export default function Header(username) {
   return (
     <header>
-      <h1>Welcome to NC News</h1>
+      <h1>Northcoders News</h1>
       {/* <nav>
         <Link to="/" className="navItem">Home</Link>
         <Link to="/articles" className="navItem">Articles</Link>

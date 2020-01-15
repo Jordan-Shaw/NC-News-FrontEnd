@@ -11,21 +11,48 @@ html, body {
   height: 100%,
 }
 
+@media screen and (max-width: 560px) {
+  html {
+    display: flex;
+    flex-direction: column;
+  }
+
+  Header {
+    height: 150px
+  }
+
+  h1 {
+    display: inline;
+    position: relative;
+    top: 75px;
+  }
+}
+
 body {
   background-color: #ffffff;
 }
 
 Header {
+  position: fixed;
   background-color: #202829;
   border-bottom: solid 10pt #ba1f31;
   margin-bottom: 1%;
   color: #ffffff;
+  width: 100%;
+}
+
+.pageBody {
+  position: absolute;
+  top: 120px;
+  left: 20px;
+  z-index: -1;
+
 }
 
 h1 {
   color: #ffffff;
   padding-bottom: 1%;
-  font-size: 50pt;
+  font-size: 36pt;
   text-align: center;
 }
 
