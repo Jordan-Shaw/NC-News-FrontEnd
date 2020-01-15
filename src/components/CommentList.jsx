@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import * as api from "../api"
 import CommentCard from './CommentCard'
+import AddComment from './AddComment'
 
 export default class CommentList extends Component {
   state = {
@@ -10,6 +11,7 @@ export default class CommentList extends Component {
 
   render() {
     const { comments, isLoading } = this.state;
+    const { username, article_id } = this.props
 
     if (isLoading) {
       return <p>Comments loading...</p>
@@ -22,12 +24,19 @@ export default class CommentList extends Component {
               return <CommentCard comment={comment} key={comment.comment_id} />
             })}
           </ul>
+          <AddComment handleCommentSubmission={this.handleCommentSubmission} username={username} article_id={article_id} />
         </div>
       )
     }
   }
 
-  addComment = () => { }
+  handleCommentSubmission = (username, body, article_id) => {
+    api.postComment(username, body).then(newComment => {
+      this.setState(currentState => {
+        return currentState.comments.push(newComment);
+      })
+    })
+  }
 
   componentDidMount() {
     const { article_id } = this.props;

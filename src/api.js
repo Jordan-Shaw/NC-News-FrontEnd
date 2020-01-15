@@ -48,3 +48,12 @@ export const handleVote = (id, type, num) => {
     })
   }
 }
+
+export const postComment = (username, body, article_id) => {
+  return axios.post(`${baseURL}/articles/${article_id}/comments`, {
+    username: username,
+    body: body
+  }).then(response => {
+    return response.data.comment
+  })
+}

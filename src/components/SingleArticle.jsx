@@ -12,9 +12,11 @@ export default class SingleArticle extends Component {
     err: null
   }
 
+
   render() {
     const { article, isLoading, err } = this.state;
     const { title, body, topic, author, votes, article_id } = article;
+    const { username } = this.props;
 
     if (isLoading) {
       return <p>Loading...</p>
@@ -29,7 +31,7 @@ export default class SingleArticle extends Component {
             <Voter className="singleArticleVoter" votes={votes} article_id={article_id} />
           </div>
           <div className="commentList">
-            <CommentList article_id={article.article_id} />
+            <CommentList article_id={article.article_id} username={username} />
           </div>
         </div>
       )
