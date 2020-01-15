@@ -7,7 +7,7 @@ export default function CommentDeleter({ comment_id, comment, handleCommentDelet
         handleCommentDeletion(comment_id, comment)
       }
     }}>
-      Delete comment
+      <span role="img" aria-label="delete comment" className="deleteCommentButton">❌</span>
     </button>
   )
 }
