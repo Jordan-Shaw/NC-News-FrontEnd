@@ -11,7 +11,7 @@ export default function ArticleCard(props) {
       <p className="author">By {author}</p>
       <p className="date">{created_at} </p>
       <p className="comments">{comment_count} comments</p>
-      <Voter className="votes" votes={votes} article_id={article_id} />
+      <Voter className="articleCardVoter" votes={votes} article_id={article_id} />
       <p className="topic">Topic: {topic}</p>
     </li>
   )
