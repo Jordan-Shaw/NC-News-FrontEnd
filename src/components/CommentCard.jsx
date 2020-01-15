@@ -16,9 +16,9 @@ export default function CommentCard({ username, comment, handleCommentDeletion }
         <Voter votes={votes} comment_id={comment_id} />
       </li>
     )
-  } else if (typeof (comment) === 'string') {
-    return (<li className="deletedCard">
-      {comment}
+  } else if (comment.msg) {
+    return (<li className="deletedCard" key={`${comment.comment_id}`}>
+      {comment.msg}
     </li>)
   } else {
     return (
