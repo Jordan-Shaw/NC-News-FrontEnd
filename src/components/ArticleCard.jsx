@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from "@reach/router"
-import Voter from './ArticleVoter'
+import Voter from './Voter'
 
 export default function ArticleCard(props) {
   const { article_id, author, comment_count, created_at, title, topic, votes } = props.article
