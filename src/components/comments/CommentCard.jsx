@@ -1,5 +1,5 @@
 import React from 'react'
-import Voter from './Voter'
+import Voter from '../general/Voter'
 import CommentDeleter from './CommentDeleter'
 
 

@@ -1,14 +1,14 @@
 import React, { Component } from 'react'
 import './App.css';
 import { Router } from '@reach/router';
-import Header from "./components/Header"
-import Homepage from "./components/Homepage"
-import SingleArticle from "./components/SingleArticle"
-import ArticlePage from "./components/ArticlePage"
-import TopicsPage from "./components/TopicsPage"
+import Header from "./components/general/Header"
+import Homepage from "./components/general/Homepage"
+import SingleArticle from "./components/articles/SingleArticle"
+import ArticlePage from "./components/articles/ArticlePage"
+import TopicsPage from "./components/topics/TopicsPage"
 import { stack as Menu } from 'react-burger-menu'
 import { Link } from '@reach/router'
-import ErrorPage from './components/ErrorPage';
+import ErrorPage from './components/general/ErrorPage';
 
 
 export default class App extends Component {

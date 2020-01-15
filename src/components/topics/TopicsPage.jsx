@@ -1,5 +1,5 @@
 import React from 'react'
-import ArticleList from './ArticleList'
+import ArticleList from '../articles/ArticleList'
 
 export default function TopicsPage(props) {
   const { topic } = props

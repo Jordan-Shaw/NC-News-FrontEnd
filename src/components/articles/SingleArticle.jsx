@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
-import * as api from "../api"
-import CommentList from './CommentList'
-import ErrorPage from './ErrorPage';
-import Voter from './Voter';
+import * as api from "../../api"
+import CommentList from '../comments/CommentList'
+import ErrorPage from '../general/ErrorPage';
+import Voter from '../general/Voter';
 
 
 export default class SingleArticle extends Component {

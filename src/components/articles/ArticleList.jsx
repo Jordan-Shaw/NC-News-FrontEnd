@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import ArticleCard from "./ArticleCard";
-import * as api from "../api"
+import * as api from "../../api"
 import { Link } from '@reach/router'
-import ErrorPage from "./ErrorPage"
+import ErrorPage from "../general/ErrorPage"
 
 export default class ArticleList extends Component {
   state = {
