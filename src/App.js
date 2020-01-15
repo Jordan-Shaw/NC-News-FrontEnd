@@ -40,26 +40,3 @@ export default class App extends Component {
   }
 }
 
-
-// function App() {
-//   return (
-//     <div className="App">
-//       <Menu>
-//         <Link to="/" className="navItem">Home</Link>
-//         <Link to="/articles" className="navItem">Articles</Link>
-//         <Link to={`/users/${username}`} className="navItem">Profile</Link>
-//       </Menu>
-//       <div id="page-wrap">
-//         <Header />
-//         <Router className="pageBody">
-//           <Homepage path="/" />
-//           <ArticlePage path="/articles" />
-//           <TopicsPage path="/articles/topics/:topic" />
-//           <SingleArticle path="/articles/:article_id" />
-//           <ErrorPage default />
-//         </Router>
-//       </div>
-//     </div>
-//   );
-// }
-
