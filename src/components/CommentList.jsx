@@ -22,7 +22,7 @@ export default class CommentList extends Component {
           <AddComment handleCommentSubmission={this.handleCommentSubmission} username={username} article_id={article_id} />
           <ul>
             {comments.map(comment => {
-              return <CommentCard comment={comment} key={comment.comment_id} />
+              return <CommentCard comment={comment} key={comment.comment_id} username={username} handleCommentDeletion={this.handleCommentDeletion} />
             })}
           </ul>
         </div>
@@ -37,6 +37,15 @@ export default class CommentList extends Component {
       })
     })
   }
+
+  handleCommentDeletion = (comment_id, deletedComment) => {
+    api.deleteComment(comment_id).then((response) => {
+      this.setState(currentState => {
+        const commentIndex = currentState.comments.findIndex(comment => { return comment === deletedComment });
+        return currentState.comments.splice(commentIndex, 1, response)
+      });
+    });
+  };
 
   componentDidMount() {
     const { article_id } = this.props;

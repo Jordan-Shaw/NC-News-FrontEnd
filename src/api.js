@@ -59,3 +59,9 @@ export const postComment = (username, value, article_id) => {
     console.log(err);
   })
 }
+
+export const deleteComment = (comment_id) => {
+  return axios.delete(`${baseURL}/comments/${comment_id}`).then(() => {
+    return "Comment deleted"
+  })
+}
