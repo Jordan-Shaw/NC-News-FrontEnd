@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react'
 import './App.css';
 import { Router } from '@reach/router';
 import Header from "./components/Header"
@@ -11,27 +11,55 @@ import { Link } from '@reach/router'
 import ErrorPage from './components/ErrorPage';
 
 
+export default class App extends Component {
+  state = {
+    username: 'Miscellaneous_Missingno'
+  }
+  render() {
+    const { username } = this.state
 
-function App(username) {
-  return (
-    <div className="App">
-      <Menu>
-        <Link to="/" className="navItem">Home</Link>
-        <Link to="/articles" className="navItem">Articles</Link>
-        <Link to={`/users/${username}`} className="navItem">Profile</Link>
-      </Menu>
-      <div id="page-wrap">
-        <Header />
-        <Router className="pageBody">
-          <Homepage path="/" />
-          <ArticlePage path="/articles" />
-          <TopicsPage path="/articles/topics/:topic" />
-          <SingleArticle path="/articles/:article_id" />
-          <ErrorPage default />
-        </Router>
+    return (
+      <div className="App">
+        <Menu>
+          <Link to="/" className="navItem">Home</Link>
+          <Link to="/articles" className="navItem">Articles</Link>
+          <Link to={`/users/${username}`} className="navItem">Profile</Link>
+        </Menu>
+        <div id="page-wrap">
+          <Header />
+          <Router className="pageBody">
+            <Homepage path="/" />
+            <ArticlePage path="/articles" username={username} />
+            <TopicsPage path="/articles/topics/:topic" />
+            <SingleArticle path="/articles/:article_id" username={username} />
+            <ErrorPage default />
+          </Router>
+        </div>
       </div>
-    </div>
-  );
+    )
+  }
 }
 
-export default App;
+
+// function App() {
+//   return (
+//     <div className="App">
+//       <Menu>
+//         <Link to="/" className="navItem">Home</Link>
+//         <Link to="/articles" className="navItem">Articles</Link>
+//         <Link to={`/users/${username}`} className="navItem">Profile</Link>
+//       </Menu>
+//       <div id="page-wrap">
+//         <Header />
+//         <Router className="pageBody">
+//           <Homepage path="/" />
+//           <ArticlePage path="/articles" />
+//           <TopicsPage path="/articles/topics/:topic" />
+//           <SingleArticle path="/articles/:article_id" />
+//           <ErrorPage default />
+//         </Router>
+//       </div>
+//     </div>
+//   );
+// }
+
