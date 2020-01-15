@@ -32,10 +32,10 @@ export default class ArticleList extends Component {
               <option value="topic">Topic</option>
             </select>
           </label>
-          <ul>Topic:
-            <li key="allTopics"><Link to={"/articles"}>All topics</Link></li>
+          <ul className="listOfArticles">Topic:
+            <li key="allTopics"><Link to={"/articles"}>{"< all topics />"}</Link></li>
             {this.state.topics.map(topic => {
-              return <li key={`${topic.slug}`}><Link to={`/articles/topics/${topic.slug}`}>{`${topic.slug}`}</Link></li>
+              return <li key={`${topic.slug}`}><Link to={`/articles/topics/${topic.slug}`}>{`< ${topic.slug} />`}</Link></li>
             })}
           </ul>
           <ul>
