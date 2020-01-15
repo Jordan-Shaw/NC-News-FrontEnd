@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const baseURL = "https://nc-news-js.herokuapp.com/api/"
+const baseURL = "https://nc-news-js.herokuapp.com/api"
 
 export const getArticles = (sort_by, topic, author, order) => {
   return axios.get(`${baseURL}/articles`, {
@@ -49,11 +49,13 @@ export const handleVote = (id, type, num) => {
   }
 }
 
-export const postComment = (username, body, article_id) => {
+export const postComment = (username, value, article_id) => {
   return axios.post(`${baseURL}/articles/${article_id}/comments`, {
     username: username,
-    body: body
+    body: value
   }).then(response => {
     return response.data.comment
+  }).catch(err => {
+    console.log(err);
   })
 }

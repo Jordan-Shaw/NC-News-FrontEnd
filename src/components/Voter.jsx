@@ -47,5 +47,4 @@ export default class Voter extends Component {
       api.handleVote(comment_id, "comment", num)
     }
   }
-
 }

@@ -19,21 +19,21 @@ export default class CommentList extends Component {
       return (
         <div>
           <h3>Comments</h3>
+          <AddComment handleCommentSubmission={this.handleCommentSubmission} username={username} article_id={article_id} />
           <ul>
             {comments.map(comment => {
               return <CommentCard comment={comment} key={comment.comment_id} />
             })}
           </ul>
-          <AddComment handleCommentSubmission={this.handleCommentSubmission} username={username} article_id={article_id} />
         </div>
       )
     }
   }
 
   handleCommentSubmission = (username, body, article_id) => {
-    api.postComment(username, body).then(newComment => {
+    api.postComment(username, body, article_id).then(newComment => {
       this.setState(currentState => {
-        return currentState.comments.push(newComment);
+        return currentState.comments.unshift(newComment);
       })
     })
   }

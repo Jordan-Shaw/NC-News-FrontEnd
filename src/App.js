@@ -13,7 +13,7 @@ import ErrorPage from './components/ErrorPage';
 
 export default class App extends Component {
   state = {
-    username: 'Miscellaneous_Missingno'
+    username: 'tickle122'
   }
   render() {
     const { username } = this.state
