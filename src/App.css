@@ -18,13 +18,25 @@ html, body {
   }
 
   Header {
-    height: 150px
+    position: fixed;
+    height: 120px
+  }
+
+  .bm-burger-button {
+    display: inline;
   }
 
   h1 {
-    display: inline;
-    position: relative;
-    top: 75px;
+    position: absolute;
+    left: 80px;
+    font-size: 20pt;
+  }
+
+  .pageBody {
+    position: absolute;
+    top: 200px;
+    left: 20px;
+    z-index: -1;
   }
 }
 

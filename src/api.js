@@ -32,3 +32,19 @@ export const getTopics = () => {
     return response.data.topics
   })
 }
+
+export const handleVote = (id, type, num) => {
+  if (type === "article") {
+    return axios.patch(`${baseURL}/articles/${id}`, {
+      inc_votes: num
+    }).then(response => {
+      return response.data.article.votes
+    })
+  } else if (type === "comment") {
+    return axios.patch(`${baseURL}/comments/${id}`, {
+      inc_votes: num
+    }).then(response => {
+      return response.data.comment.votes
+    })
+  }
+}

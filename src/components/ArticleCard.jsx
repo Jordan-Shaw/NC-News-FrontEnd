@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from "@reach/router"
+import Voter from './ArticleVoter'
 
 export default function ArticleCard(props) {
   const { article_id, author, comment_count, created_at, title, topic, votes } = props.article
@@ -10,7 +11,7 @@ export default function ArticleCard(props) {
       <p className="author">By {author}</p>
       <p className="date">{created_at} </p>
       <p className="comments">{comment_count} comments</p>
-      <p className="votes">Votes: {votes}</p>
+      <Voter className="votes" votes={votes} article_id={article_id} />
       <p className="topic">Topic: {topic}</p>
     </li>
   )
