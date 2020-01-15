@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import * as api from "../api"
 import CommentList from './CommentList'
 import ErrorPage from './ErrorPage';
+import Voter from './Voter';
 
 
 export default class SingleArticle extends Component {
@@ -13,17 +14,19 @@ export default class SingleArticle extends Component {
 
   render() {
     const { article, isLoading, err } = this.state;
+    const { title, body, topic, author, votes, article_id } = article;
+
     if (isLoading) {
       return <p>Loading...</p>
     } else if (!err) {
       return (
         <div>
           <div className="singleArticle">
-            <h2 className="articleTitle">{article.title}</h2>
-            <p className="articleBody">{article.body}</p>
-            <p className="articleTopic">Topic: {article.topic}</p>
-            <p className="articleAuthor">Author: {article.author}</p>
-            <p className="authorVotes">Votes: {article.votes}</p>
+            <h2 className="articleTitle">{title}</h2>
+            <p className="articleBody">{body}</p>
+            <p className="articleTopic">Topic: {topic}</p>
+            <p className="articleAuthor">Author: {author}</p>
+            <Voter className="singleArticleVoter" votes={votes} article_id={article_id} />
           </div>
           <div className="commentList">
             <CommentList article_id={article.article_id} />
