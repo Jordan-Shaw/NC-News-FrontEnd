@@ -108,14 +108,14 @@ Note: Beware of modifying this element as it can break the animations - you shou
  
 /* General sidebar styles */
 .bm-menu {
-  background: #373a47;
+  background: #ba1f31;
   padding: 2.5em 1.5em 0;
   font-size: 1.15em;
 }
  
 /* Morph shape necessary with bubble or elastic */
 .bm-morph-shape {
-  fill: #373a47;
+  fill: #ba1f31;
 }
  
 /* Wrapper for item list */
@@ -294,8 +294,8 @@ a.topics {
   background-color: #202829;
   color: white;
   font-size: 14px;
-letter-spacing: 5px;
-border-top: solid 10pt #ba1f31;
+  letter-spacing: 5px;
+  border-top: solid 10pt #ba1f31;
   
 }
 
@@ -309,7 +309,7 @@ h3.h3Border {
   color: white;
   background-color: #202829;
   padding-bottom: 1%;
-    font-size: 20px;
+  font-size: 20px;
 }
 
 .articleCard {
