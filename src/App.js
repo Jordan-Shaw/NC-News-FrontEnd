@@ -9,6 +9,7 @@ import TopicsPage from "./components/topics/TopicsPage"
 import { bubble as Menu } from 'react-burger-menu'
 import { Link } from '@reach/router'
 import ErrorPage from './components/general/ErrorPage';
+import UserPage from './components/general/UserPage';
 
 
 export default class App extends Component {
@@ -32,6 +33,7 @@ export default class App extends Component {
             <ArticlePage path="/articles" username={username} />
             <TopicsPage path="/articles/topics/:topic" />
             <SingleArticle path="/articles/:article_id" username={username} />
+            <UserPage path="/users/:username" />
             <ErrorPage default />
           </Router>
         </div>

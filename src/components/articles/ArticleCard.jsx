@@ -8,8 +8,8 @@ export default function ArticleCard(props) {
   return (
     <li className="articleCard">
       <div className="topRow">
-        <p className="title"><Link to={`/articles/${article_id}`}>{title}</Link></p>
-        <p className="author">By {author}</p>
+        <p><Link to={`/articles/${article_id}`} className="title">{`< ${title} />`}</Link></p>
+        <p className="author">By <Link to={`/users/${author}`}>{author}</Link></p>
         <p className="date">{created_at} </p>
       </div>
       <div className="bottomRow">

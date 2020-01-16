@@ -1,18 +1,18 @@
 import React, { Component } from 'react';
 import ArticleCard from "./ArticleCard";
 import * as api from "../../api"
-import { Link } from '@reach/router'
+// import { Link } from '@reach/router'
 import ErrorPage from "../general/ErrorPage"
 
 export default class ArticleList extends Component {
   state = {
     articles: [],
     isLoading: true,
-    sort_by: "created_at",
-    topic: null,
-    author: null,
-    order: "desc",
-    topics: [],
+    // sort_by: "created_at",
+    // topic: null,
+    // author: null,
+    // order: "desc",
+    // topics: [],
     err: null
   }
 
@@ -23,7 +23,7 @@ export default class ArticleList extends Component {
     } else if (!err) {
       return (
         <div className="bgimg-2">
-          <div className="sortByWrapper">
+          {/* <div className="sortByWrapper">
           <label>Sort by:
             <select name="sort_by" id="sort_by_Select" value={this.state.sort_by} onChange={this.handleChange}>
               <option value="created_at">Date posted</option>
@@ -38,7 +38,7 @@ export default class ArticleList extends Component {
             {this.state.topics.map(topic => {
               return <li key={`${topic.slug}`} className="topics"><Link to={`/articles/topics/${topic.slug}`} className="topics">{`< ${topic.slug} />`}</Link></li>
           })}
-          </ul>
+          </ul> */}
           <ul className="listOfArticles">
             {articles.map(article => {
               return <ArticleCard article={article} key={article.article_id} className="articles"/>
@@ -51,36 +51,36 @@ export default class ArticleList extends Component {
     }
   }
 
-  handleChange = (event) => {
-    const { value } = event.target
-    this.setState(currentState => {
-      return { articles: currentState.articles, sort_by: `${value}` }
-    });
-  }
+  // handleChange = (event) => {
+  //   const { value } = event.target
+  //   this.setState(currentState => {
+  //     return { articles: currentState.articles, sort_by: `${value}` }
+  //   });
+  // }
 
   componentDidMount() {
-    const { sort_by, author, order } = this.state
-    const { topic } = this.props
+    const { order } = this.state
+    const { topic, author, sort_by } = this.props
     this.fetchArticles({ sort_by, topic, author, order });
-    this.fetchTopics();
+    // this.fetchTopics();
   }
 
   componentDidUpdate(prevProps, prevState) {
-    const { sort_by, author, order } = this.state;
-    const { topic } = this.props;
+    const { order } = this.state;
+    const { topic, sort_by, author } = this.props;
 
-    if (prevState.sort_by !== sort_by || prevState.author !== author || prevState.order !== order) {
+    if (prevProps.sort_by !== sort_by || prevProps.author !== author || prevState.order !== order) {
       this.fetchArticles({ sort_by, topic, author, order })
     } else if (prevProps.topic !== topic) {
       this.fetchArticles({ sort_by, topic, author, order })
     }
   }
 
-  fetchTopics = () => {
-    return api.getTopics().then(topics => {
-      this.setState({ topics: topics })
-    })
-  }
+  // fetchTopics = () => {
+  //   return api.getTopics().then(topics => {
+  //     this.setState({ topics: topics })
+  //   })
+  // }
 
   fetchArticles = (stuff) => {
     const { sort_by, topic, author, order } = stuff

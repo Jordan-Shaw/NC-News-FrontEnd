@@ -65,3 +65,10 @@ export const deleteComment = (comment_id) => {
     return { msg: "Comment deleted", key: comment_id }
   })
 }
+
+export const getUser = (username) => {
+  console.log('getUser', username, `${baseURL}/users/${username}`)
+  return axios.get(`${baseURL}/users/${username}`).then((userResponse) => {
+    return { avatar_url: userResponse.data.user.avatar_url, name: userResponse.data.user.name }
+    })
+  }
