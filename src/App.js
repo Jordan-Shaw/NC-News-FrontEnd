@@ -28,7 +28,7 @@ export default class App extends Component {
         <Header />
         <div id="page-wrap">
           <Router className="pageBody">
-            <Homepage path="/" />
+            <Homepage path="/" username={username}/>
             <ArticlePage path="/articles" username={username} />
             <TopicsPage path="/articles/topics/:topic" />
             <SingleArticle path="/articles/:article_id" username={username} />

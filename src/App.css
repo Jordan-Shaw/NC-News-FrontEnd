@@ -20,11 +20,40 @@
   }
 
   .pageBody {
+    min-height: 100%;
+    min-width: 100%;
     z-index: 0;
   }
 }
 
+#root {
+  height: 100%;
+  width: 100%;
+}
+
+.outer-container {
+  width: 100%;
+  height: 100%;
+}
+
+#page-wrap {
+  width: 100%;
+  height: 100%;
+}
+
+.pageBody {
+  width: 100%;
+  height: 100%;
+}
+
+html {
+  height: 100%;
+  width: 100%;
+}
+
 body {
+  height: 100%;
+  width: 100%;
   background-color: #ffffff;
 }
 
@@ -35,6 +64,7 @@ Header {
   border-bottom: solid 10pt #ba1f31;
   color: #ffffff;
   width: 100%;
+  height: 15%
 }
 
 h1 {
@@ -64,7 +94,7 @@ a:visited {
 h2 {
   /* text-align: left; */
   font-size: 28pt;
-  color: #ba1f31;
+  color: white;
 }
 
 /* Position and sizing of burger button */
@@ -166,7 +196,7 @@ div.commentList {
 }
 
 .bgimg-1 {
-  background-image: url('./media/parallax-1.jpg');
+  background-image: url('./media/parallax1.jpg');
   height: 950px;
   /* width: 100vw; */
   z-index: -2;
@@ -177,8 +207,6 @@ background-color: #202829;
 height: 950px;
   z-index: 0;
 }
-
-
 
 .caption1 span.border {
   position: absolute;
@@ -325,3 +353,26 @@ ul.listOfArticles {
 
 .articleCard:hover {
 }
+
+.homepageWrap {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  top: 30%;
+  left: 33.5%;
+  padding: 3%;
+  justify-content: flex-end;
+  align-items: center;
+  background-color: #202829;
+  color: white;
+  width: fit-content;
+  border-bottom: solid 10pt #ba1f31;
+}
+
+.homepageBg {
+  width: 100%;
+  height: 100%;
+  background-image: url('./media/parallax3.jpg');
+
+}
+
