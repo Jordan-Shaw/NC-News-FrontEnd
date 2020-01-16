@@ -12,7 +12,7 @@ export default class Voter extends Component {
     votes += thumbed;
 
     return (
-      <div>
+      <div className="articleCardVoter">
         <button className="thumbsUp" onClick={() => {
           this.handleThumbs(1, article_id, comment_id)
         }} disabled={thumbed === 1}>

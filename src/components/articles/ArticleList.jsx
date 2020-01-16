@@ -22,7 +22,8 @@ export default class ArticleList extends Component {
       return <p>Loading...</p>
     } else if (!err) {
       return (
-        <div>
+        <div className="bgimg-2">
+          <div className="sortByWrapper">
           <label>Sort by:
             <select name="sort_by" id="sort_by_Select" value={this.state.sort_by} onChange={this.handleChange}>
               <option value="created_at">Date posted</option>
@@ -32,15 +33,15 @@ export default class ArticleList extends Component {
               <option value="topic">Topic</option>
             </select>
           </label>
-          <ul className="listOfArticles">Topic:
-            <li key="allTopics"><Link to={"/articles"}>{"< all topics />"}</Link></li>
+          </div>
+          <ul className="listOfTopics">
             {this.state.topics.map(topic => {
-              return <li key={`${topic.slug}`}><Link to={`/articles/topics/${topic.slug}`}>{`< ${topic.slug} />`}</Link></li>
-            })}
+              return <li key={`${topic.slug}`} className="topics"><Link to={`/articles/topics/${topic.slug}`} className="topics">{`< ${topic.slug} />`}</Link></li>
+          })}
           </ul>
-          <ul>
+          <ul className="listOfArticles">
             {articles.map(article => {
-              return <ArticleCard article={article} key={article.article_id} />
+              return <ArticleCard article={article} key={article.article_id} className="articles"/>
             })}
           </ul>
         </div>
