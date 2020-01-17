@@ -18,6 +18,7 @@ export default class UserPage extends Component {
         <h2 className="username">{name}</h2>
         <img src={`${avatar_url}`} alt={`${name}'s avatar`} className="userProfilePic"/>
         <p className="UserInfo">@{username}</p>
+        <h2 className="yourArticles">Your articles:</h2>
         <ArticleList author={username}/>
       </div>
 

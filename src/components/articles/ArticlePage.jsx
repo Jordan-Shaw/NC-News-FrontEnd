@@ -16,7 +16,7 @@ export default class ArticlePage extends Component {
   render() {
     return (
       <div className="articlePageWrapper">
-        <div class="bgimg-1">
+        <div className="bgimg-1">
           <div className="caption1">
             <span className="border">ARTICLES</span>
             <div className="caption2">
@@ -40,11 +40,12 @@ export default class ArticlePage extends Component {
           </label>
         </div>
         <ul className="listOfTopics">
+          <li key="allTopics" className="topics"><Link to={`/articles/`} className="topics">{"<"} all topics {'/>'}</ Link></li>
           {this.state.topics.map(topic => {
             return <li key={`${topic.slug}`} className="topics"><Link to={`/articles/topics/${topic.slug}`} className="topics">{`< ${topic.slug} />`}</Link></li>
           })}
         </ul>
-        <ArticleList className="ArticleListWrapper" topic={this.state.topic} sort_by={this.state.sort_by} author={this.state.author}/>
+        <ArticleList className="ArticleListWrapper" topic={this.state.topic} sort_by={this.state.sort_by} author={this.state.author} />
 
       </div>
     )

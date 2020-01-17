@@ -95,6 +95,8 @@ a {
 
 a:hover {
   text-decoration: underline;
+  background-color: #000;
+  color: #000;
 }
 
 a:visited {
@@ -298,6 +300,19 @@ input {
   border-bottom: solid 10pt #202829;
 }
 
+.allTopicsButton {
+  padding-top: 2%;
+}
+
+a.topics {
+  background-color: #ba1f31;
+ padding: 2%;
+ padding: 18px;
+font-size: 24px;
+letter-spacing: 10px;
+color: white;
+}
+
 li.topics {
  background-color: #ba1f31;
  padding: 2%;
@@ -309,7 +324,14 @@ letter-spacing: 10px;
 
 li.topics:hover {
  background-color: black;
+}
 
+a.topics:hover {
+  background-color: #000;
+}
+
+p.topics:hover {
+  background-color: #000;
 }
 
 li.articleCard {
@@ -355,7 +377,7 @@ li.articleCard:hover {
 }
 
 a.topics {
- color: white;
+ 
 }
 
 .h3Box {
@@ -429,7 +451,7 @@ ul.listOfArticles {
   background-image: url('./media/parallax3.jpg');
 }
 
-.UserPage, .ArticlePage {
+.UserPage, .ArticlePage, .TopicsPage {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -443,6 +465,10 @@ ul.listOfArticles {
 
 .ArticlePage {
   top: 20%;
+}
+
+.TopicsPage {
+  top: 10%;
 }
 
 .articleTitle {
@@ -460,4 +486,10 @@ button {
   border: 0;
   padding: 0;
   background-color: #ba1f31;
+}
+
+.yourArticles {
+  color: #000;
+  padding-top: 2%;
+  font-size: larger;
 }
