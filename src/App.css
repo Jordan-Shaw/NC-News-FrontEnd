@@ -429,14 +429,26 @@ ul.listOfArticles {
   background-image: url('./media/parallax3.jpg');
 }
 
-.UserPage {
+.UserPage, .ArticlePage {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   position: relative;
+}
+
+.UserPage {
   top: 30%;
 }
+
+.ArticlePage {
+  top: 20%;
+}
+
+.articleTitle {
+  background-color: #ba1f31;
+}
+
 
 .userProfilePic {
   width: 20%;

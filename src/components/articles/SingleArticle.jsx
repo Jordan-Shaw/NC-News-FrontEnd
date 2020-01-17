@@ -22,7 +22,7 @@ export default class SingleArticle extends Component {
       return <p>Loading...</p>
     } else if (!err) {
       return (
-        <div>
+        <div className="ArticlePage">
           <div className="singleArticle">
             <h2 className="articleTitle">{title}</h2>
             <p className="articleBody">{body}</p>

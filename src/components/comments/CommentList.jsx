@@ -33,23 +33,14 @@ export default class CommentList extends Component {
   handleCommentSubmission = (username, body, article_id) => {
     api.postComment(username, body, article_id).then(newComment => {
       this.setState(currentState => {
-        return currentState.comments.unshift(newComment);
+        return {comments: [newComment, ...currentState.comments]}
       })
     })
   }
 
-  handleCommentDeletion = (comment_id, deletedComment) => {
-    api.deleteComment(comment_id).then((response) => {
-      this.setState(currentState => {
-        const commentIndex = currentState.comments.findIndex(comment => { return comment === deletedComment });
-        return currentState.comments.splice(commentIndex, 1, response)
-      });
-    });
-  };
-
   componentDidMount() {
     const { article_id } = this.props;
-    this.fetchComments(article_id);
+    this.fetchComments(article_id)
   }
 
   fetchComments = (article_id) => {
