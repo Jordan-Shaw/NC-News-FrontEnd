@@ -9,6 +9,7 @@ export default function Homepage(props) {
         <p>Welcome to NC News, we hope you enjoy your stay!</p>
         <br></br>
         <h3>You are logged in as {username}</h3>
+        <p>P.S. try the konami code on the articles page...</p>
       </div>
     </div>
   )

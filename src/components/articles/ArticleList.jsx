@@ -8,11 +8,6 @@ export default class ArticleList extends Component {
   state = {
     articles: [],
     isLoading: true,
-    // sort_by: "created_at",
-    // topic: null,
-    // author: null,
-    // order: "desc",
-    // topics: [],
     err: null
   }
 
@@ -22,13 +17,11 @@ export default class ArticleList extends Component {
       return <p>Loading...</p>
     } else if (!err) {
       return (
-        <div className="bgimg-2">
           <ul className="listOfArticles">
             {articles.map(article => {
               return <ArticleCard article={article} key={article.article_id} className="articles"/>
             })}
           </ul>
-        </div>
       )
     } else {
       return <ErrorPage err={err} />
@@ -51,12 +44,6 @@ export default class ArticleList extends Component {
       this.fetchArticles({ sort_by, topic, author, order })
     }
   }
-
-  // fetchTopics = () => {
-  //   return api.getTopics().then(topics => {
-  //     this.setState({ topics: topics })
-  //   })
-  // }
 
   fetchArticles = (stuff) => {
     const { sort_by, topic, author, order } = stuff

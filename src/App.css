@@ -1,74 +1,32 @@
+/* ------------------ Setting Layouts and that to 100% ------------------------ */
 html {
+  height: 100%;
+  width: 100%;
   margin: 0 auto;
 }
-
-@media screen and (max-width: 560px) {
-  html {
-    display: flex;
-    flex-direction: column;
-  }
-
-  Header {
-    position: fixed;
-    height: 120px
-  }
-
-  .bm-burger-button {
-    display: inline;
-  }
-
-  h1 {
-    position: absolute;
-    left: 80px;
-    font-size: 5pt;
-  }
-
-  .pageBody {
-    min-height: 100%;
-    min-width: 100%;
-    z-index: 0;
-  }
-
-  .homepageWrap {
-    background-color: tomato;
-    width: 80%;
-  }
-}
-
 #root {
   height: 100%;
   width: 100%;
 }
-
 .outer-container {
   width: 100%;
   height: 100%;
 }
-
 #page-wrap {
   width: 100%;
   height: 100%;
 }
-
 body {
   padding-bottom: 20px;
-}
-
-.pageBody {
-  width: 100%;
-  height: 100%;
-}
-
-html {
-  height: 100%;
-  width: 100%;
-}
-
-body {
   height: 100%;
   width: 100%;
   background-color: #ffffff;
 }
+.pageBody {
+  width: 100%;
+  height: 100%;
+}
+/* ---------------------------------------------------------------------------- */
 
 Header {
   position: fixed;
@@ -111,80 +69,7 @@ h2 {
   color: white;
 }
 
-/* Position and sizing of burger button */
-.bm-burger-button {
-  position: fixed;
-  width: 36px;
-  height: 30px;
-  left: 36px;
-  top: 36px;
-}
- 
-/* Color/shape of burger icon bars */
-.bm-burger-bars {
-  background: white;
-}
- 
-/* Color/shape of burger icon bars on hover*/
-.bm-burger-bars-hover {
-  background: #a90000;
-}
- 
-/* Position and sizing of clickable cross button */
-.bm-cross-button {
-  height: 24px;
-  width: 24px;
-}
- 
-/* Color/shape of close button cross */
-.bm-cross {
-  background: #bdc3c7;
-}
- 
-/*
-Sidebar wrapper styles
-Note: Beware of modifying this element as it can break the animations - you should not need to touch it in most cases
-*/
-.bm-menu-wrap {
-  position: fixed;
-  height: 100%;
-}
- 
-/* General sidebar styles */
-.bm-menu {
-  background: #ba1f31;
-  padding: 2.5em 1.5em 0;
-  font-size: 1.15em;
-}
- 
-/* Morph shape necessary with bubble or elastic */
-.bm-morph-shape {
-  fill: #ba1f31;
-}
- 
-/* Wrapper for item list */
-.bm-item-list {
-  color: #b8b7ad;
-  padding: 0.8em;
-}
- 
-/* Individual item */
-.bm-item {
-  display: inline-block;
-  color: white;
-}
- 
-/* Styling of overlay */
-.bm-overlay {
-  background: rgba(0, 0, 0, 0.3);
-}
 
-.burgerList {
-  padding-bottom: 0%;
-  padding-left: 5%;
-  margin-bottom: 0%;
-  list-style-type: none;
-}
 
 .commentVote {
   display: flex;
@@ -196,96 +81,8 @@ div.commentList {
   margin-top: 5%;
 }
 
-/* Parallax experimentation */
-
-.bgimg-1, .bgimg-2, .bgimg-3 {
-    position: relative;
-    /* opacity: 0.65; */
-    /* width: 100vw; */
-    z-index: -10;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.bgimg-1 {
-  background-image: url('./media/parallax1.jpg');
-  height: 950px;
-  /* width: 100vw; */
-  z-index: -2;
-}
-
-.bgimg-2 {
-  background-color: #202829;
-  height: 100vh;
-  width: 100%;
-  z-index: 0;
-  background-position: center;
-}
-
-
-.caption1 span.border {
-  position: absolute;
-  background-color: #ba1f31;
-  opacity: 1;
-  color: white;
-  padding: 18px;
-  font-size: 25px;
-  letter-spacing: 10px;
-  text-align: center;
-}
-
-h2.username {
-  color: black;
-}
-
-.caption1 {
-    position: absolute;
-    z-index: -100;
-    left: -8vw;
-    right: 0;
-    top: 50%;
-    width: 100vw;
-    text-align: center;
-    color: #000;
-}
-
-.caption2 {
-    position: absolute;
-    left: 56vw;
-    top: 4vw;
-    text-align: center;
-    color: #000;
-}
-
-.caption2 p.border {
-  position: absolute;
-  background-color: #ba1f31;
-  color: white;
-  padding: 18px;
-  font-size: 25px;
-  text-align: right;
-}
-
-.bg-img-2Wrapper {
-  position: absolute;
-  z-index: 100;
-  left: 0;
-  right: 0;
-  top: 0;
-  width: 100vw;
-  text-align: center;
-  color: #000;
-  background-color: white;
-}
-
 input {
   z-index: 101;
-}
-
-.articlePageWrapper {
-  z-index: 98;
 }
 
 .listOfTopics {
@@ -376,10 +173,6 @@ li.articleCard:hover {
   display: flex;
 }
 
-a.topics {
- 
-}
-
 .h3Box {
   display: flex;
   flex-direction: column;
@@ -398,18 +191,6 @@ h3.h3Border {
   width: fit-content;
   padding: 2%;
 }
-
-.sortByWrapper {
-  color: black;
-  background-color:  #ba1f31;
-  padding-bottom: 1%;
-  font-size: 20px;
-}
-
-.articleCard {
-
-}
-
 ul.listOfArticles {
 
   list-style-type: none;
@@ -426,49 +207,6 @@ ul.listOfArticles {
   letter-spacing: 5px;
   background-color: white;
 
-}
-
-.homepageWrap {
-  display: flex;
-  flex-direction: column;
-  top: 30%;
-  padding: 3%;
-  justify-content: center;
-  align-items: center;
-  background-color: #202829;
-  color: white;
-  width: 50%;
-  border-bottom: solid 10pt #ba1f31;
-}
-
-.homepageBg {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-  background-image: url('./media/parallax3.jpg');
-}
-
-.UserPage, .ArticlePage, .TopicsPage {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-}
-
-.UserPage {
-  top: 30%;
-}
-
-.ArticlePage {
-  top: 20%;
-}
-
-.TopicsPage {
-  top: 10%;
 }
 
 .articleTitle {
@@ -492,4 +230,304 @@ button {
   color: #000;
   padding-top: 2%;
   font-size: larger;
+}
+
+/* ------------------- Parallax (and parallax adjacent) CSS --------------------- */
+.homepageWrap {
+  display: flex;
+  flex-direction: column;
+  top: 30%;
+  padding: 3%;
+  justify-content: center;
+  align-items: center;
+  background-color: #202829;
+  color: white;
+  width: 50%;
+  border-bottom: solid 10pt #ba1f31;
+}
+.homepageBg {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-image: url('./media/parallax3.jpg');
+}
+.UserPage, .ArticlePage, .TopicsPage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.UserPage {
+  top: 30%;
+}
+.ArticlePage {
+  top: 20%;
+}
+.TopicsPage {
+  top: 10%;
+}
+.sortByWrapper {
+  color: white;
+  position: relative;
+  text-align: center;
+  background-color:  #ba1f31;
+  padding-bottom: 1%;
+  font-size: 20px;
+}
+.articlePageWrapper {
+  z-index: 98;
+}
+.bgimg-1, .bgimg-2, .bgimg-3 {
+    position: relative;
+    /* opacity: 0.65; */
+    /* width: 100vw; */
+    z-index: -10;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.bgimg-1 {
+  background-image: url('./media/parallax1.jpg');
+  height: 950px;
+  /* width: 100vw; */
+  z-index: -2;
+}
+
+.bgimg-doggo {
+  position: relative;
+  z-index: -10;
+  background-attachment: inherit;
+  background-position: unset;
+  background-repeat: unset;
+  background-size: cover;
+  background-image: url('./media/doggo2.gif');
+  height: 950px;
+  top: 20%;
+}
+
+.bgimg-2 {
+  background-color: #202829;
+  height: 100vh;
+  width: 100%;
+  z-index: 0;
+  background-position: center;
+}
+.caption1 span.border {
+  position: absolute;
+  background-color: #ba1f31;
+  opacity: 1;
+  color: white;
+  padding: 18px;
+  font-size: 25px;
+  letter-spacing: 10px;
+  text-align: center;
+}
+h2.username {
+  color: black;
+}
+.caption1 {
+    position: absolute;
+    z-index: -100;
+    left: -8vw;
+    right: 0;
+    top: 50%;
+    width: 100vw;
+    text-align: center;
+    color: #000;
+}
+
+p.border {
+  position: absolute;
+  background-color: #ba1f31;
+  color: white;
+  padding: 18px;
+  font-size: 25px;
+  text-align: right;
+}
+.bg-img-2Wrapper {
+  position: absolute;
+  z-index: 100;
+  left: 0;
+  right: 0;
+  top: 0;
+  width: 100vw;
+  text-align: center;
+  color: #000;
+  background-color: white;
+}
+/* ------------------------------------------------------------------------------ */
+
+
+/* -------------------------- RESPONSIVE CSS ------------------------------------ */
+@media screen and (max-width: 784px) {
+  html {
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+  }
+
+  Header {
+    position: fixed;
+    height: 90px;
+    width: 100vw
+  }
+
+  .bm-burger-button {
+    display: inline;
+  }
+
+  h1 {
+    position: absolute;
+    left: 30%;
+    flex-wrap: wrap;
+    font-size: 175%;
+    bottom: 1px;
+    top: 5px;
+  }
+
+  .pageBody {
+    min-height: 100%;
+    min-width: 100%;
+    z-index: 0;
+  }
+
+  .homepageWrap {
+    width: 80%;
+  }
+
+  .bgimg-1, .bgimg-2, .bgimg-3 {
+    position: relative;
+    width: inherit;
+    height: 100vw;
+    z-index: -10;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .bgimg-1 {
+  background-image: url('./media/parallax1small.png');
+  height: 650px;
+  }
+
+  .caption1 {
+    position: relative;
+    left: -40%;
+    top: 50%;
+  }
+
+ .caption1 span.border {
+   border-bottom: solid 5px #202829;
+ }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+  }
+
+  a.topics {
+    font-size: 60%;
+    letter-spacing: 5pt;
+  }
+
+  .h3Box {
+    position: relative;
+    color: white;
+    font-size: 14px;
+    letter-spacing: 5px;
+    border-top: solid 10pt #ba1f31;
+  }
+
+  .topRow {
+    font-size: 75%;
+    letter-spacing: 3pt;
+    flex-direction: column;
+  }
+
+  .bottomRow {
+    font-size: 75%;
+    letter-spacing: 3pt;
+    flex-direction: column;
+  }
+
+  .title {
+    overflow-wrap: normal;
+  }
+}
+/* ------------------------------------------------------------------------------ */
+
+
+/* ------------------------------ BURGER CSS -------------------------------------*/
+/* Position and sizing of burger button */
+.bm-burger-button {
+  position: fixed;
+  width: 36px;
+  height: 30px;
+  left: 36px;
+  top: 36px;
+}
+/* Color/shape of burger icon bars */
+.bm-burger-bars {
+  background: white;
+}
+/* Color/shape of burger icon bars on hover*/
+.bm-burger-bars-hover {
+  background: #a90000;
+}
+/* Position and sizing of clickable cross button */
+.bm-cross-button {
+  height: 24px;
+  width: 24px;
+}
+/* Color/shape of close button cross */
+.bm-cross {
+  background: #bdc3c7;
+}
+/*
+Sidebar wrapper styles */
+.bm-menu-wrap {
+  position: fixed;
+  height: 100%;
+}
+/* General sidebar styles */
+.bm-menu {
+  background: #ba1f31;
+  padding: 2.5em 1.5em 0;
+  font-size: 1.15em;
+}
+/* Morph shape necessary with bubble or elastic */
+.bm-morph-shape {
+  fill: #ba1f31;
+}
+/* Wrapper for item list */
+.bm-item-list {
+  color: #b8b7ad;
+  padding: 0.8em;
+}
+/* Individual item */
+.bm-item {
+  display: inline-block;
+  color: white;
+}
+/* Styling of overlay */
+.bm-overlay {
+  background: rgba(0, 0, 0, 0.3);
+}
+.burgerList {
+  padding-bottom: 0%;
+  padding-left: 5%;
+  margin-bottom: 0%;
+  list-style-type: none;
+}
+/* ---------------------------------------------------------------------- */
+
+.doggoPic {
+  position: relative;
 }
