@@ -23,22 +23,6 @@ export default class ArticleList extends Component {
     } else if (!err) {
       return (
         <div className="bgimg-2">
-          {/* <div className="sortByWrapper">
-          <label>Sort by:
-            <select name="sort_by" id="sort_by_Select" value={this.state.sort_by} onChange={this.handleChange}>
-              <option value="created_at">Date posted</option>
-              <option value="votes">Votes</option>
-              <option value="comment_count">Number of comments</option>
-              <option value="author">Author</option>
-              <option value="topic">Topic</option>
-            </select>
-          </label>
-          </div>
-          <ul className="listOfTopics">
-            {this.state.topics.map(topic => {
-              return <li key={`${topic.slug}`} className="topics"><Link to={`/articles/topics/${topic.slug}`} className="topics">{`< ${topic.slug} />`}</Link></li>
-          })}
-          </ul> */}
           <ul className="listOfArticles">
             {articles.map(article => {
               return <ArticleCard article={article} key={article.article_id} className="articles"/>
@@ -51,18 +35,10 @@ export default class ArticleList extends Component {
     }
   }
 
-  // handleChange = (event) => {
-  //   const { value } = event.target
-  //   this.setState(currentState => {
-  //     return { articles: currentState.articles, sort_by: `${value}` }
-  //   });
-  // }
-
   componentDidMount() {
     const { order } = this.state
     const { topic, author, sort_by } = this.props
     this.fetchArticles({ sort_by, topic, author, order });
-    // this.fetchTopics();
   }
 
   componentDidUpdate(prevProps, prevState) {
