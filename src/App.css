@@ -303,7 +303,7 @@ button {
   position: relative;
   z-index: -10;
   background-attachment: inherit;
-  background-position: unset;
+  background-position: center;
   background-repeat: unset;
   background-size: cover;
   background-image: url('./media/doggo2.gif');
@@ -402,7 +402,7 @@ p.border {
   }
 
   .bgimg-1, .bgimg-2, .bgimg-3 {
-    position: relative;
+    position: fixed;
     width: inherit;
     height: 100vw;
     z-index: -10;
@@ -459,6 +459,10 @@ p.border {
 
   .title {
     overflow-wrap: normal;
+  }
+
+  .UserPage {
+    top: 20%;
   }
 }
 /* ------------------------------------------------------------------------------ */
