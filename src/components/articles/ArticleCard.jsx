@@ -7,16 +7,14 @@ export default function ArticleCard(props) {
 
   return (
     <li className="articleCard">
-      <div className="topRow">
-        <p><Link to={`/articles/${article_id}`} className="title">{`< ${title} />`}</Link></p>
+      <div className="cardTop">
+        <p className="articleTitle"><Link to={`/articles/${article_id}`} className="title">{`< ${title} />`}</Link></p>
         <p className="author">By <Link to={`/users/${author}`}>{author}</Link></p>
         <p className="date">{created_at} </p>
-      </div>
-      <div className="bottomRow">
         <p className="comments">{comment_count} comments</p>
-        <Voter votes={votes} article_id={article_id} />
         <p className="topic">Topic: {topic}</p>
       </div>
+        <Voter votes={votes} article_id={article_id} className="voterVotes"/>
     </li>
   )
 }

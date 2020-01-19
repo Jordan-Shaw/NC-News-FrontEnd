@@ -15,10 +15,13 @@ export default class UserPage extends Component {
     const {username} = this.props;
     return (
       <div className="UserPage">
-        <h2 className="username">{name}</h2>
-        <img src={`${avatar_url}`} alt={`${name}'s avatar`} className="userProfilePic"/>
-        <p className="UserInfo">@{username}</p>
-        <h2 className="yourArticles">Your articles:</h2>
+        <div className="userBg">
+          <div className="caption3">
+            <h2 className="username">{name}</h2>
+            <img src={`${avatar_url}`} alt={`${name}'s avatar`} className="userProfilePic"/>
+          <p className="UserInfo">@{username}</p>
+          </div>
+        </div>
         <ArticleList author={username}/>
       </div>
 

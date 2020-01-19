@@ -1,481 +1,26 @@
-/* ------------------ Setting Layouts and that to 100% ------------------------ */
-html {
-  height: 100%;
-  width: 100%;
-  margin: 0 auto;
-}
-#root {
-  height: 100%;
-  width: 100%;
-}
-.outer-container {
-  width: 100%;
-  height: 100%;
-}
-#page-wrap {
-  width: 100%;
-  height: 100%;
-}
-body {
-  padding-bottom: 20px;
-  height: 100%;
-  width: 100%;
-  background-color: #ffffff;
-}
-.pageBody {
-  width: 100%;
-  height: 100%;
-}
-/* ---------------------------------------------------------------------------- */
-
-Header {
-  position: fixed;
-  z-index: 101;
-  background-color: #202829;
-  border-bottom: solid 10pt #ba1f31;
-  color: #ffffff;
-  width: 100%;
-  height: 15%
-}
-
-h1 {
-  color: #ffffff;
-  font-size: 36pt;
-  text-align: center;
-}
+  @import url("https://fonts.googleapis.com/css?family=Assistant|Raleway:300&display=swap"); 
 
 
-a {
-  text-decoration: none;
-  color: white;
-
-}
-
-a:hover {
-  text-decoration: underline;
-  background-color: #000;
-  color: #000;
-}
-
-a:visited {
-  text-decoration: underline;
-  color: white;
-
-}
-
-h2 {
-  /* text-align: left; */
-  font-size: 28pt;
-  color: white;
-}
-
-
-
-.commentVote {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-}
-
-div.commentList {
-  margin-top: 5%;
-}
-
-input {
-  z-index: 101;
-}
-
-.listOfTopics {
-  display: flex;
-  list-style: none;
-  justify-content: space-evenly;
-  align-content: center;
-  width: auto;
-  background-color:  #ba1f31;
+* {
   margin: 0;
-  padding-bottom: 5%;
-  border-bottom: solid 10pt #202829;
-}
-
-.allTopicsButton {
-  padding-top: 2%;
-}
-
-a.topics {
-  background-color: #ba1f31;
- padding: 2%;
- padding: 18px;
-font-size: 24px;
-letter-spacing: 10px;
-color: white;
-}
-
-li.topics {
- background-color: #ba1f31;
- padding: 2%;
- padding: 18px;
-font-size: 28px;
-letter-spacing: 10px;
-
-}
-
-li.topics:hover {
- background-color: black;
-}
-
-a.topics:hover {
-  background-color: #000;
-}
-
-p.topics:hover {
-  background-color: #000;
-}
-
-li.articleCard {
-  background-color: #ba1f31;
-  max-width: 90%;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  text-align: left;
-  color: white;
-  font-size: 20px;
-  margin-top: 5%;
-  margin-left: 5%;
-    border-bottom: solid 5pt #202829;
-
-
-}
-
-li.articleCard:hover {
-  background-color: black;
-  color: white;
-  transform: scale(1.05);
-  transition-duration: 300ms;
-}
-
-.topRow {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  text-align: left;
-}
-
-.bottomRow {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  text-align: left;
-}
-
-.articleCardVoter {
-  display: flex;
-}
-
-.h3Box {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color:  #ba1f31;
-  color: white;
-  font-size: 14px;
-  letter-spacing: 5px;
-  border-top: solid 10pt #ba1f31;
-  
-}
-
-h3.h3Border {
-  text-align: center;
-  width: fit-content;
-  padding: 2%;
-}
-ul.listOfArticles {
-
-  list-style-type: none;
-  padding-bottom: 0px;
-  justify-items: center;
-  margin-bottom: 0px;
-  margin-top: 0%;
-  padding-top: 2%;
-  padding-right: 2%;
-  padding-left: 2%;
-  height: 826px;
-  color: white;
-  font-size: 14px;
-  letter-spacing: 5px;
-  background-color: white;
-
-}
-
-.articleTitle {
-  background-color: #ba1f31;
-}
-
-
-.userProfilePic {
-  width: 20%;
-  border-radius: 50%;
-}
-
-button {
-  font-size: 28pt;
-  border: 0;
   padding: 0;
-  background-color: #ba1f31;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
 }
 
-.yourArticles {
-  color: #000;
-  padding-top: 2%;
-  font-size: larger;
+html {
 }
 
-/* ------------------- Parallax (and parallax adjacent) CSS --------------------- */
-.homepageWrap {
-  display: flex;
-  flex-direction: column;
-  top: 30%;
-  padding: 3%;
-  justify-content: center;
-  align-items: center;
-  background-color: #202829;
-  color: white;
-  width: 50%;
-  border-bottom: solid 10pt #ba1f31;
-}
-.homepageBg {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-  background-image: url('./media/parallax3.jpg');
-}
-.UserPage, .ArticlePage, .TopicsPage {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-}
-.UserPage {
-  top: 30%;
-}
-.ArticlePage {
-  top: 20%;
-}
-.TopicsPage {
-  top: 10%;
-}
-.sortByWrapper {
-  color: white;
-  position: relative;
-  text-align: center;
-  background-color:  #ba1f31;
-  padding-bottom: 1%;
-  font-size: 20px;
-}
-.articlePageWrapper {
-  z-index: 98;
-}
-.bgimg-1, .bgimg-2, .bgimg-3 {
-    position: relative;
-    /* opacity: 0.65; */
-    /* width: 100vw; */
-    z-index: -10;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.bgimg-1 {
-  background-image: url('./media/parallax1.jpg');
-  height: 950px;
-  /* width: 100vw; */
-  z-index: -2;
-}
-
-.bgimg-doggo {
-  position: relative;
-  z-index: -10;
-  background-attachment: inherit;
-  background-position: center;
-  background-repeat: unset;
-  background-size: cover;
-  background-image: url('./media/doggo2.gif');
-  height: 950px;
-  top: 20%;
-}
-
-.bgimg-2 {
-  background-color: #202829;
-  height: 100vh;
-  width: 100%;
-  z-index: 0;
-  background-position: center;
-}
-.caption1 span.border {
-  position: absolute;
-  background-color: #ba1f31;
-  opacity: 1;
-  color: white;
-  padding: 18px;
-  font-size: 25px;
-  letter-spacing: 10px;
-  text-align: center;
-}
-h2.username {
-  color: black;
-}
-.caption1 {
-    position: absolute;
-    z-index: -100;
-    left: -8vw;
-    right: 0;
-    top: 50%;
-    width: 100vw;
-    text-align: center;
-    color: #000;
-}
-
-p.border {
-  position: absolute;
-  background-color: #ba1f31;
-  color: white;
-  padding: 18px;
-  font-size: 25px;
-  text-align: right;
-}
-.bg-img-2Wrapper {
-  position: absolute;
-  z-index: 100;
-  left: 0;
-  right: 0;
-  top: 0;
-  width: 100vw;
-  text-align: center;
-  color: #000;
-  background-color: white;
-}
-/* ------------------------------------------------------------------------------ */
-
-
-/* -------------------------- RESPONSIVE CSS ------------------------------------ */
-@media screen and (max-width: 784px) {
-  html {
-    display: flex;
-    flex-direction: column;
-    overflow-x: hidden;
-  }
-
-  Header {
-    position: fixed;
-    height: 90px;
-    width: 100vw
-  }
-
-  .bm-burger-button {
-    display: inline;
-  }
-
-  h1 {
-    position: absolute;
-    left: 30%;
-    flex-wrap: wrap;
-    font-size: 175%;
-    bottom: 1px;
-    top: 5px;
-  }
-
-  .pageBody {
-    min-height: 100%;
-    min-width: 100%;
-    z-index: 0;
-  }
-
-  .homepageWrap {
-    width: 80%;
-  }
-
-  .bgimg-1, .bgimg-2, .bgimg-3 {
-    position: fixed;
-    width: inherit;
-    height: 100vw;
-    z-index: -10;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-
-  .bgimg-1 {
-  background-image: url('./media/parallax1small.png');
-  height: 650px;
-  }
-
-  .caption1 {
-    position: relative;
-    left: -40%;
-    top: 50%;
-  }
-
- .caption1 span.border {
-   border-bottom: solid 5px #202829;
- }
-
-  ul {
-    display: flex;
-    flex-direction: column;
-  }
-
-  a.topics {
-    font-size: 60%;
-    letter-spacing: 5pt;
-  }
-
-  .h3Box {
-    position: relative;
-    color: white;
-    font-size: 14px;
-    letter-spacing: 5px;
-    border-top: solid 10pt #ba1f31;
-  }
-
-  .topRow {
-    font-size: 75%;
-    letter-spacing: 3pt;
-    flex-direction: column;
-  }
-
-  .bottomRow {
-    font-size: 75%;
-    letter-spacing: 3pt;
-    flex-direction: column;
-  }
-
-  .title {
-    overflow-wrap: normal;
-  }
-
-  .UserPage {
-    top: 20%;
-  }
-}
-/* ------------------------------------------------------------------------------ */
-
-
-/* ------------------------------ BURGER CSS -------------------------------------*/
 /* Position and sizing of burger button */
 .bm-burger-button {
   position: fixed;
-  width: 36px;
-  height: 30px;
-  left: 36px;
-  top: 36px;
+  width: 26px;
+  height: 20px;
+  left: 28px;
+  top: 2%;
 }
 /* Color/shape of burger icon bars */
 .bm-burger-bars {
@@ -530,8 +75,431 @@ Sidebar wrapper styles */
   margin-bottom: 0%;
   list-style-type: none;
 }
-/* ---------------------------------------------------------------------- */
 
-.doggoPic {
+#root, .outer-container {
+  height: 100vh;
+  width: 100vw;
+}
+
+.outer-container {
+
+}
+
+Header {
+  position: fixed;
+  width: 100vw;
+  height: 9%;
+  background-color: #202829;
+  border-bottom: solid 10pt #ba1f31;
+  z-index: 100;
+}
+
+#page-wrap {
   position: relative;
+  height: 90%;
+  width: 100vw;
+  top: 10%;
+}
+
+h1 {
+  position: relative;
+  left: 7%;
+  top: 4%;
+  color: white;
+  font-size: 28pt;
+}
+
+.pageBody {
+  height: 100%;
+  width: 100%;
+}
+
+.homepageBg, .homepageWrap {
+  width: 100%;
+  height: 100%;
+}
+
+.homepageWrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 50%;
+  width: 50%;
+  background-color: #202829;
+  border-bottom: solid 10pt #ba1f31;
+}
+
+.homepageBg {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url('./media/parallax3.jpg');
+}
+
+h2, h3, .welcome, .ps {
+  color: white;
+  text-align: center;
+}
+
+h2 {
+  margin-bottom: 5%;
+  font-size: 25pt;
+
+}
+
+.welcome {
+  margin-bottom: 5%;
+}
+
+h3 {
+  font-size: 18pt;
+}
+
+.loggedInAs {
+  margin-bottom: 10%;
+}
+
+.articlePageWrapper {
+  height: 100%;
+  width: 100%; 
+}
+
+.bgimg-1, .topicsBg {
+  height: 100%;
+  width: 100%;
+  background-image: url(./media/parallax1.jpg);
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.caption1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 7.5%;
+  width: 25%;
+  top: 50%;
+  left: 50%;
+  background-color: #202829;
+  border-bottom: solid 5pt #ba1f31;
+}
+
+.border {
+  color: white;
+  letter-spacing: 2pt;
+}
+
+.articlePageFlex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.h3Box, .sortByWrapper, .listOfTopics, select#sort_by_select, .allTopicsWrapper {
+  width: 100%;
+  text-align: center;
+  color: white;
+  background-color: #202829;
+}
+
+.h3Border {
+  padding-top: 2%;
+  padding-bottom: 2%;
+}
+
+.listOfTopics {
+  display: flex;
+  justify-content: space-evenly;
+  list-style-type: none;
+  border-bottom: solid 5pt #ba1f31;
+  padding-top: 0.5%;
+  padding-bottom: 0.5%;
+}
+
+li.topics, p.topics {
+  padding: 1%;
+  letter-spacing: 2pt;
+  font-size: larger;
+}
+
+li.topics:hover, p.topics:hover {
+background-color: black;
+}
+
+a.topics, a.topics:visited, p.topics {
+  color: white;
+}
+
+a.topics:hover, a.title:hover, a:hover {
+  color: #ba1f31;
+}
+
+.cardTop {
+  padding: 2%;
+}
+
+ul.listOfArticles {
+  height: 100%;
+  width: 100%;
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+li.articleCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 22%;
+  margin: 1%;
+  border-bottom: solid 5pt #202829;
+  background-color: #ba1f31;
+  color: white;
+}
+
+li.articleCard:hover {
+  background-color: black;
+  transform: scale(1.1);
+  transition-duration: 250ms;
+}
+
+a {
+  color: white;
+}
+
+a.title {
+  color: white;
+  padding-bottom: 1%;
+}
+
+.articleTitle {
+  padding-bottom: 5%;
+  font-size: 14pt;
+}
+
+.articleCardVoter {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  align-self: center;
+}
+
+.sortByWrapper {
+
+}
+
+a.bm-item.navItem:hover {
+  color: black;
+}
+
+h1, h2, h3, span.border {
+  font-family: 'Raleway', sans-serif;
+}
+
+span.border {
+  letter-spacing: 5pt;
+}
+
+p, a, label, .userInfo {
+  font-family: 'Assistant';
+}
+
+.TopicsPage {
+  width: 100%;
+  height: 100%;
+}
+
+.topicsBg {
+  width: 100%;
+  height: 100%;
+}
+
+.caption2 {
+  background-color: #202829;
+  border-bottom: solid 5pt #ba1f31;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  height: 20%;
+  width: 50%;
+}
+
+h2.topicsTitle {
+  margin-bottom: 0cm;
+}
+
+.allTopicsWrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-bottom: solid 5pt #ba1f31;
+  height: 20%;
+}
+
+p.topics {
+  justify-self: flex-start;
+  align-self: center;
+  padding-bottom: 1%;
+}
+
+p {
+  text-align: center;
+}
+
+.UserPage {
+  width: 100%;
+  height: 100%;
+}
+
+.userBg {
+  height: 75%;
+  width: 100%;
+  background-image: url('./media/parallax4.jpg');
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.userProfilePic {
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+}
+
+.caption3 {
+  margin-top: 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #202829;
+  border-bottom: solid 5pt #ba1f31;
+  width: 40%;
+  height: 75%;
+}
+
+.username {
+  margin-top: 5%;
+}
+
+.UserInfo {
+  margin-top: 2%;
+  font-size: 20pt;
+  color: white;
+}
+
+.select-css {
+  color: white;
+  font-family: Assistant;
+}
+
+@media screen and (max-width: 850px) {
+  h1 {
+    left: 10%;
+  }
+
+  .homepageWrap {
+    width: 60%;
+  }
+
+  .bgimg-1 {
+    background-image: url('./media/parallax1small.png');
+  }
+
+  .caption1 {
+    font-family: Assistant;
+    width: 25%;
+  }
+
+  li.articleCard {
+  width: 44%;
+  margin: 2%;
+}
+
+.caption2 {
+  width: 80%;
+  }
+
+  .caption3 {
+    top: 5%;
+    height: 60%;
+  }
+}
+
+@media screen and (max-width: 700px) {
+
+  .homepageWrap {
+    width: 70%;
+  }
+
+  .caption1 {
+    width: 35%;
+  }
+
+  .caption3 {
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 620px) {
+  h1 {
+    left: 15%;
+  }
+
+  .homepageWrap {
+    width: 90%;
+  }
+
+  .caption1 {
+    width: 40%;
+  }
+
+  .listOfTopics {
+  flex-direction: column;
+  }
+
+  li.topics {
+    padding: 2%;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  h1 {
+    font-size: 22pt;
+    left: 20%;
+  }
+
+  .caption1 {
+    width: 60%;
+  }
+
+    li.articleCard {
+  width: 90%;
+  margin: 2%;
+}
+
+.caption3 {
+    width: 70%;
+  }
+
+.allTopicsWrapper {
+  padding-top: 5%;
+}
 }

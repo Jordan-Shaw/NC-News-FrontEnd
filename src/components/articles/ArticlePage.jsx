@@ -24,29 +24,31 @@ export default class ArticlePage extends Component {
               <span className="border">↓ARTICLES↓</span>
             </div>
           </div>
-          <div className="h3Box">
-            <h3 className="h3Border">Here are all of our articles. Use the buttons below to see articles relating to specific topics.
-          </h3>
-          </div>
-          <div className="sortByWrapper">
-            <label>Sort by:
-            <select name="sort_by" id="sort_by_Select" value={this.state.sort_by} onChange={this.handleChange}>
-                <option value="created_at">Date posted</option>
-                <option value="votes">Votes</option>
-                <option value="comment_count">Number of comments</option>
-                <option value="author">Author</option>
-                <option value="topic">Topic</option>
-              </select>
-            </label>
-          </div>
-          <ul className="listOfTopics"> {/* <--- styling of inner container on outer container evernt */}
-            <li key="allTopics" className="topics"><Link to={`/articles/`} className="topics">{"<"} all topics {'/>'}</ Link></li>
+          <div className="articlePageFlex">
+           <div className="h3Box">
+              <h3 className="h3Border">Here are all of our articles. Use the buttons below to see articles relating to specific topics.
+             </h3>
+            </div>
+            <div className="sortByWrapper">
+              <label>Sort by:
+              <select name="sort_by" id="sort_by_Select" value={this.state.sort_by} onChange={this.handleChange} className="select-css">
+                  <option value="created_at">Date posted</option>
+                  <option value="votes">Votes</option>
+                  <option value="comment_count">Number of comments</option>
+                  <option value="author">Author</option>
+                  <option value="topic">Topic</option>
+                </select>
+              </label>
+            </div>
+            <ul className="listOfTopics"> {/* <--- styling of inner container on outer container evernt */}
+              <li key="allTopics" className="topics"><Link to={`/articles/`} className="topics">{"<"} all topics {'/>'}</ Link></li>
             {this.state.topics.map(topic => {
               return <li key={`${topic.slug}`} className="topics"><Link to={`/articles/topics/${topic.slug}`} className="topics">{`< ${topic.slug} />`}</Link></li>
             })}
-          </ul>
+            </ul>
           <ArticleList className="ArticleListWrapper" topic={this.state.topic} sort_by={this.state.sort_by} author={this.state.author} />
-        </div>
+          </div>
+          </div>
       )
   }
 
