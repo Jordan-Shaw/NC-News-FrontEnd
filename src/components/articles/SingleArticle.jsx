@@ -3,6 +3,7 @@ import * as api from "../../api"
 import CommentList from '../comments/CommentList'
 import ErrorPage from '../general/ErrorPage';
 import Voter from '../general/Voter';
+import {Link} from '@reach/router'
 
 
 export default class SingleArticle extends Component {
@@ -23,16 +24,22 @@ export default class SingleArticle extends Component {
     } else if (!err) {
       return (
         <div className="ArticlePage">
-          <div className="singleArticle">
-            <h2 className="articleTitle">{title}</h2>
+          <div className="parallax4">
+            <div className="articleBox">
+              <h2 className="articleTitle">{title}</h2>
+            </div>
+          <div className="articleBox2">
             <p className="articleBody">{body}</p>
             <p className="articleTopic">Topic: {topic}</p>
-            <p className="articleAuthor">Author: {author}</p>
+              <p className="articleAuthor"><Link to={`/users/${author}`}>Author: {author}</Link></p>
             <Voter className="singleArticleVoter" votes={votes} article_id={article_id} />
           </div>
-          <div className="commentList">
-            <CommentList article_id={article.article_id} username={username} />
-          </div>
+            <div className="articleBox3">
+              <h2 className="articleTitle">Comments</h2>
+            <h2 className="articleTitle">↓</h2>
+            </div>
+        </div>
+            <CommentList article_id={article.article_id} username={username} className="commentList"/>
         </div>
       )
     } else {

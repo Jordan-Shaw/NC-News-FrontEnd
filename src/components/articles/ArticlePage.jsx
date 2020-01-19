@@ -40,7 +40,7 @@ export default class ArticlePage extends Component {
                 </select>
               </label>
             </div>
-            <ul className="listOfTopics"> {/* <--- styling of inner container on outer container evernt */}
+            <ul className="listOfTopics">
               <li key="allTopics" className="topics"><Link to={`/articles/`} className="topics">{"<"} all topics {'/>'}</ Link></li>
             {this.state.topics.map(topic => {
               return <li key={`${topic.slug}`} className="topics"><Link to={`/articles/topics/${topic.slug}`} className="topics">{`< ${topic.slug} />`}</Link></li>

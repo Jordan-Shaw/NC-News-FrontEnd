@@ -169,7 +169,7 @@ h3 {
 .bgimg-1, .topicsBg, .bgimg-doggo {
   height: 100%;
   width: 100%;
-  background-image: url(./media/parallax1.jpg);
+  background-image: url('./media/parallax1.jpg');
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
@@ -256,7 +256,7 @@ ul.listOfArticles {
   flex-wrap: wrap;
 }
 
-li.articleCard {
+li.articleCard, .commentCard {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -267,7 +267,11 @@ li.articleCard {
   color: white;
 }
 
-li.articleCard:hover {
+.commentCard {
+  width: 90%;
+}
+
+li.articleCard:hover, .commentCard:hover {
   background-color: black;
   transform: scale(1.1);
   transition-duration: 250ms;
@@ -355,12 +359,12 @@ p {
   text-align: center;
 }
 
-.UserPage {
+.UserPage, .ArticlePage {
   width: 100%;
   height: 100%;
 }
 
-.userBg {
+.userBg, .parallax4 {
   height: 75%;
   width: 100%;
   background-image: url('./media/parallax4.jpg');
@@ -371,6 +375,91 @@ p {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+}
+
+.parallax4 {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.articleBox, .articleBox2, .articleBox3 {
+  height: fit-content;
+  width: 75%;
+  background-color: #202829;
+  padding: 2%;
+}
+
+.articleBox {
+  align-self: flex-start;
+  margin-left: 2%;
+  border-bottom: #ba1f31 solid 5pt;
+}
+
+.articleBox2, .articleBox3 {
+  margin-top: 3%;
+  color: white;
+}
+
+
+.ArticlePage {
+  height: 100%;
+  width: 100%;
+}
+
+
+.submitCommentBox {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  border-bottom: #ba1f31 solid 5pt;
+  background-color: #202829;
+  height: 100px;
+  color: white;
+  padding-top: 2%;
+  padding-bottom: 2%;
+
+}
+
+input {
+  background-color: #ba1f31;
+  border-bottom: #202829 solid 5pt;
+  color: white;
+  width: 10%;
+}
+
+input:hover {
+  background-color: black;
+}
+
+textarea {
+  color: white;
+  width: 75%;
+  height: 95%;
+  background-color: #565958;
+  font-size: x-large;
+  text-emphasis: center;
+}
+
+p.articleBody {
+  margin-bottom: 2%;
+}
+
+p.articleTopic {
+  margin-bottom: 2%;
+}
+
+.articleBox3 {
+  height: fit-content;
+  width: fit-content;
+}
+
+h2.articleTitle {
+  margin: 0;
+  padding: 0;
+  letter-spacing: 2pt;
 }
 
 .userProfilePic {
@@ -408,6 +497,34 @@ p {
 
 .bgimg-doggo {
   background-image: url('./media/doggo2.gif');
+}
+
+.commentList {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.loggedInUser {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-right: 2%;
+  padding-left: 2%;
+  padding-top: 2%;
+}
+
+p.commentAuthor {
+  padding-top: 2%;
+  align-self: center;
+  justify-self: center;
+}
+
+span.deleteCommentButton {
+  padding-right: 2%;
 }
 
 @media screen and (max-width: 850px) {
@@ -501,5 +618,20 @@ p {
 
 .allTopicsWrapper {
   padding-top: 5%;
+}
+
+h2.articleTitle {
+font-size: 90%;
+}
+
+p.articleBody {
+  font-size: 80%;
+}
+
+textarea {
+  width: 70%;
+}
+input {
+  width: 15%;
 }
 }

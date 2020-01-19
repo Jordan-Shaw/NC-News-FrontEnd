@@ -18,9 +18,8 @@ export default class CommentList extends Component {
     } else {
       return (
         <div>
-          <h3>Comments</h3>
           <AddComment handleCommentSubmission={this.handleCommentSubmission} username={username} article_id={article_id} />
-          <ul>
+          <ul className="commentList">
             {comments.map(comment => {
               return <CommentCard comment={comment} key={comment.comment_id} username={username} handleCommentDeletion={this.handleCommentDeletion} />
             })}
