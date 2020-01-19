@@ -166,7 +166,7 @@ h3 {
   width: 100%; 
 }
 
-.bgimg-1, .topicsBg {
+.bgimg-1, .topicsBg, .bgimg-doggo {
   height: 100%;
   width: 100%;
   background-image: url(./media/parallax1.jpg);
@@ -294,10 +294,6 @@ a.title {
   align-self: center;
 }
 
-.sortByWrapper {
-
-}
-
 a.bm-item.navItem:hover {
   color: black;
 }
@@ -408,6 +404,10 @@ p {
 .select-css {
   color: white;
   font-family: Assistant;
+}
+
+.bgimg-doggo {
+  background-image: url('./media/doggo2.gif');
 }
 
 @media screen and (max-width: 850px) {
