@@ -496,7 +496,9 @@ h2.articleTitle {
 }
 
 .bgimg-doggo {
-  background-image: url('./media/doggo2.gif');
+  background-image: url('./media/doggo.jpg');
+  background-position: center;
+
 }
 
 .commentList {
