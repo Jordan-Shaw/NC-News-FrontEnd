@@ -10,7 +10,6 @@ export default class UserPage extends Component {
   }
 
   render() {
-    console.log(this.state.articles);
     const { avatar_url, name } = this.state
     const {username} = this.props;
     return (
